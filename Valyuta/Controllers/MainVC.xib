@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC" customModule="Valyuta" customModuleProvider="target">
             <connections>
                 <outlet property="collection_view" destination="BqF-5W-gur" id="YY3-C4-M7o"/>
-                <outlet property="pageControll" destination="XQB-Fw-PYT" id="ggZ-gY-knd"/>
+                <outlet property="pageControll" destination="CHz-dU-iNd" id="FdL-yx-OvS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="BqF-5W-gur">
-                    <rect key="frame" x="0.0" y="44" width="414" height="269"/>
+                    <rect key="frame" x="0.0" y="64" width="414" height="269"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="0d1-DM-Hx8">
                         <size key="itemSize" width="128" height="128"/>
@@ -30,21 +30,24 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQB-Fw-PYT" customClass="SnakePageControl" customModule="Valyuta" customModuleProvider="target">
-                    <rect key="frame" x="172" y="832" width="70" height="10"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHz-dU-iNd" customClass="SnakePageControl" customModule="Valyuta" customModuleProvider="target">
+                    <rect key="frame" x="162" y="343" width="90" height="10"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="sn3-yx-bae"/>
+                    </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="pageCount">
-                            <integer key="value" value="4"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="activeTint">
-                            <color key="value" systemColor="systemRedColor"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="inactiveTint">
-                            <color key="value" systemColor="systemYellowColor"/>
+                            <integer key="value" value="5"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="progress">
                             <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="activeTint">
+                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="inactiveTint">
+                            <color key="value" systemColor="systemGray5Color"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
@@ -54,28 +57,25 @@
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BqF-5W-gur" secondAttribute="trailing" id="3di-B1-nhR"/>
                 <constraint firstItem="BqF-5W-gur" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.3" id="7EU-5X-Rgq"/>
-                <constraint firstItem="BqF-5W-gur" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="BFy-IO-Oae"/>
-                <constraint firstItem="XQB-Fw-PYT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QhH-MQ-iHH"/>
+                <constraint firstItem="BqF-5W-gur" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="BFy-IO-Oae"/>
+                <constraint firstItem="CHz-dU-iNd" firstAttribute="top" secondItem="BqF-5W-gur" secondAttribute="bottom" constant="10" id="L1e-aE-TVy"/>
+                <constraint firstItem="CHz-dU-iNd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Rw7-T5-qZ2"/>
                 <constraint firstItem="BqF-5W-gur" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WEt-Zb-m3v"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XQB-Fw-PYT" secondAttribute="bottom" constant="20" id="WzX-0V-erU"/>
             </constraints>
-            <point key="canvasLocation" x="26" y="74"/>
+            <point key="canvasLocation" x="24.637681159420293" y="73.660714285714278"/>
         </view>
     </objects>
     <designables>
-        <designable name="XQB-Fw-PYT">
-            <size key="intrinsicContentSize" width="70" height="10"/>
+        <designable name="CHz-dU-iNd">
+            <size key="intrinsicContentSize" width="90" height="10"/>
         </designable>
     </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

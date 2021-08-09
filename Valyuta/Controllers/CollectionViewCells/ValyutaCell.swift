@@ -9,15 +9,16 @@ import UIKit
 
 class ValyutaCell: UICollectionViewCell {
     
-    
+    //MARK:- nib
     static func nib() -> UINib{
         return UINib(nibName: "ValyutaCell", bundle: nil)
     }
     
+    //MARK:- identifier
     static let identifier = "ValyutaCell"
     @IBOutlet weak var backView: UIView!{
         didSet{
-            backView.layer.cornerRadius = backView.frame.height/5
+            backView.layer.cornerRadius = backView.frame.height/10
         }
     }
     
@@ -32,10 +33,11 @@ class ValyutaCell: UICollectionViewCell {
     }
     
     
-    func updateCell(buycourse:String, cbCourse:String, cellCourse:String, currensy:String){
-        buyCourseLbl.text! = buycourse
-        cbCourseLbl.text! = cbCourse
-        cellCourseLbl.text = cellCourse
+    //MARK:- SetupCell
+    func updateCell(buycourse:Float, cbCourse:Float, cellCourse:Float, currensy:String){
+        buyCourseLbl.text! = "\(Int(buycourse))"
+        cbCourseLbl.text! = "\(Int(cbCourse))"
+        cellCourseLbl.text = "\(Int(cellCourse))"
         currensyLbl.text! = currensy
     }
     
