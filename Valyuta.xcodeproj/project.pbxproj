@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C75C113B26C138D9007F3B60 /* SnakePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75C113A26C138D9007F3B60 /* SnakePageControl.swift */; };
 		C7B7DA6626C1303E0058C3AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7DA6526C1303E0058C3AB /* AppDelegate.swift */; };
 		C7B7DA6F26C1303F0058C3AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7B7DA6E26C1303F0058C3AB /* Assets.xcassets */; };
 		C7B7DA7226C1303F0058C3AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B7DA7026C1303F0058C3AB /* LaunchScreen.storyboard */; };
 		C7B7DA7D26C1307A0058C3AB /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7DA7B26C1307A0058C3AB /* MainVC.swift */; };
 		C7B7DA7E26C1307A0058C3AB /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B7DA7C26C1307A0058C3AB /* MainVC.xib */; };
+		C7B7DA8226C1316F0058C3AB /* ValyutaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7DA8026C1316F0058C3AB /* ValyutaCell.swift */; };
+		C7B7DA8326C1316F0058C3AB /* ValyutaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B7DA8126C1316F0058C3AB /* ValyutaCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C75C113A26C138D9007F3B60 /* SnakePageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnakePageControl.swift; sourceTree = "<group>"; };
 		C7B7DA6226C1303E0058C3AB /* Valyuta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Valyuta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7B7DA6526C1303E0058C3AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7B7DA6E26C1303F0058C3AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		C7B7DA7326C1303F0058C3AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7B7DA7B26C1307A0058C3AB /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		C7B7DA7C26C1307A0058C3AB /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
+		C7B7DA8026C1316F0058C3AB /* ValyutaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValyutaCell.swift; sourceTree = "<group>"; };
+		C7B7DA8126C1316F0058C3AB /* ValyutaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ValyutaCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C75C113926C138C5007F3B60 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C75C113A26C138D9007F3B60 /* SnakePageControl.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C7B7DA5926C1303D0058C3AB = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +68,41 @@
 		C7B7DA6426C1303E0058C3AB /* Valyuta */ = {
 			isa = PBXGroup;
 			children = (
+				C75C113926C138C5007F3B60 /* Helpers */,
+				C7B7DA8526C137A90058C3AB /* Model */,
+				C7B7DA8626C137B70058C3AB /* Controllers */,
 				C7B7DA6526C1303E0058C3AB /* AppDelegate.swift */,
-				C7B7DA7B26C1307A0058C3AB /* MainVC.swift */,
-				C7B7DA7C26C1307A0058C3AB /* MainVC.xib */,
 				C7B7DA6E26C1303F0058C3AB /* Assets.xcassets */,
 				C7B7DA7026C1303F0058C3AB /* LaunchScreen.storyboard */,
 				C7B7DA7326C1303F0058C3AB /* Info.plist */,
 			);
 			path = Valyuta;
+			sourceTree = "<group>";
+		};
+		C7B7DA8526C137A90058C3AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C7B7DA8626C137B70058C3AB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C7B7DA8726C137C70058C3AB /* CollectionViewCells */,
+				C7B7DA7B26C1307A0058C3AB /* MainVC.swift */,
+				C7B7DA7C26C1307A0058C3AB /* MainVC.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C7B7DA8726C137C70058C3AB /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				C7B7DA8026C1316F0058C3AB /* ValyutaCell.swift */,
+				C7B7DA8126C1316F0058C3AB /* ValyutaCell.xib */,
+			);
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +164,7 @@
 			files = (
 				C7B7DA7E26C1307A0058C3AB /* MainVC.xib in Resources */,
 				C7B7DA7226C1303F0058C3AB /* LaunchScreen.storyboard in Resources */,
+				C7B7DA8326C1316F0058C3AB /* ValyutaCell.xib in Resources */,
 				C7B7DA6F26C1303F0058C3AB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +177,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7B7DA6626C1303E0058C3AB /* AppDelegate.swift in Sources */,
+				C75C113B26C138D9007F3B60 /* SnakePageControl.swift in Sources */,
 				C7B7DA7D26C1307A0058C3AB /* MainVC.swift in Sources */,
+				C7B7DA8226C1316F0058C3AB /* ValyutaCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
